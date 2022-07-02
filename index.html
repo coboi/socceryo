@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Soccer/Football standings table">
+	<meta name="keywords" content="Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Socceryo</title>
+</head>
+<body>
+	<header>
+		<h1>Socceryo</h1>
+		<h2>Simplified <i id="league-name"></i> standings.</h2>
+	</header>
+	<main>
+		<div>
+			<label>Filter: </label>
+			<select id="league-code">
+				<option value="eng.1" selected="selected">Premier League</option>
+				<option value="esp.1">La Liga</option>
+				<option value="ita.1">Serie A</option>
+				<option value="ger.1">Bundesliga</option>
+				<option value="fra.1">Ligue 1</option>
+				<option value="ned.1">Eredivisie</option>
+			</select>
+			<select id="league-season">
+				<option value="2022" selected="selected">2022/2023</option>
+				<option value="2021">2021/2022</option>
+				<option value="2020">2020/2021</option>
+				<option value="2019">2019/2020</option>
+				<option value="2018">2018/2019</option>
+			</select>
+		</div>
+		<div>
+			<noscript>
+				<p>This website using JavaScript :)</p>
+			</noscript>
+			<table class="hidden">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Club</th>
+						<th><abbr title="Played">P</abbr></th>
+						<th><abbr title="Won">W</abbr></th>
+						<th><abbr title="Drawn">D</abbr></th>
+						<th><abbr title="Lost">L</abbr></th>
+						<th><abbr title="Goals For">GF</abbr></th>
+						<th><abbr title="Goals Against">GA</abbr></th>
+						<th><abbr title="Goal Difference">GD</abbr></th>
+						<th><abbr title="Points">Pts</abbr></th>
+					</tr>
+				</thead>
+				<tbody id="table-body"></tbody>
+			</table>
+		</div>
+	</main>
+	<footer>
+		<button id="dark-mode-button">[Dark mode]</button>
+		<p>Made by <a href="https://twitter.com/c0boi" target="_blank">coboi</a> with <a href="https://www.espn.com/soccer/" target="_blank">ESPN data</a> via <a href="https://github.com/azharimm/football-standings-api" target="_blank">Football Standings API</a></p>
+	</footer>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

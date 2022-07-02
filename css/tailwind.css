@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100;
+}
+
+header {
+    @apply py-8 px-2 xs:px-8 text-center;
+}
+
+header h1 {
+    @apply mb-1 text-3xl md:text-4xl font-bold font-serif;
+}
+
+header h2 {
+    @apply text-xl;
+}
+
+main {
+    @apply mx-auto py-4 bg-gray-50 dark:bg-zinc-900;
+}
+
+main div:nth-child(1){
+    @apply flex mb-4 p-2 gap-2 justify-center flex-wrap;
+}
+
+main div:nth-child(2){
+    @apply overflow-auto pb-4;
+}
+
+main select {
+    @apply bg-transparent;
+}
+
+main select option {
+    @apply bg-zinc-100 dark:bg-zinc-900;
+}
+
+main p {
+    @apply text-center;
+}
+
+main table {
+    @apply w-full sm:w-auto mx-auto whitespace-nowrap border-collapse;
+}
+
+main table tr {
+    @apply border-b;
+}
+
+main table tr th {
+    @apply font-semibold py-2 px-2 sm:px-4;
+}
+
+main table tr th:nth-child(2){
+    @apply border-r;
+}
+
+main table tr th:nth-child(n+7):nth-child(-n+9){
+    @apply hidden xs:table-cell;
+}
+
+main table tr td {
+    @apply py-2 px-2 sm:px-4 text-center;
+}
+
+main table tr td:nth-child(2){
+    @apply border-r text-left;
+}
+
+main table tr td:nth-child(n+7):nth-child(-n+9){
+    @apply hidden xs:table-cell;
+}
+
+main table tr th abbr {
+    @apply no-underline cursor-help;
+}
+
+footer {
+    @apply p-4 text-sm text-center flex flex-col gap-1;
+}
+
+footer button, footer a {
+    @apply hover:underline;
+}
