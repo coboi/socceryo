@@ -115,6 +115,5 @@ getLeagueSeason.addEventListener('change', function() {
 
 getDarkModeButton.addEventListener('click', function(){
 	getHtml.classList.toggle('dark')
-	console.log(localStorage.theme)
 	setTheme()
 })
