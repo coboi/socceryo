@@ -38,7 +38,7 @@ function setLeagueName(){
 }
 
 function getStandings(){
-	fetch(`https://api-football-standings.azharimm.site/leagues/${leagueCode}/standings?season=${leagueSeason}`)
+	fetch(`https://api-football-standings.azharimm.dev/leagues/${leagueCode}/standings?season=${leagueSeason}`)
 	.then(response => response.json())
 	.then(response => {
 		const standingsTable = response.data.standings
@@ -66,16 +66,16 @@ function getStandings(){
 			}
 
 			getTableBody.innerHTML += `<tr>
-									<td class="${selectedBorderColor}">${e.stats[8].value}</td>
+									<td class="${selectedBorderColor}">${e.stats[10].value}</td>
 									<td>${e.team.shortDisplayName}</td>
-									<td>${e.stats[3].value}</td>
 									<td>${e.stats[0].value}</td>
-									<td>${e.stats[2].value}</td>
+									<td>${e.stats[6].value}</td>
+									<td>${e.stats[5].value}</td>
 									<td>${e.stats[1].value}</td>
 									<td>${e.stats[4].value}</td>
-									<td>${e.stats[5].value}</td>
-									<td>${e.stats[9].value}</td>
-									<td>${e.stats[6].value}</td>
+									<td>${e.stats[3].value}</td>
+									<td>${e.stats[8].value}</td>
+									<td>${e.stats[2].value}</td>
 								</tr>`
 		})
 	})
